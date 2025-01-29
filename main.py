@@ -13,7 +13,7 @@ app.add_middleware(
     allow_headers=["*"],  # Allows all headers
 )
 
-current_date = datetime.now().strftime("%Y-%m-%dT%H:%M:%SZ")
+current_date = datetime.now().isoformat() + "Z"
 
 #response
 stage_0_db = {
