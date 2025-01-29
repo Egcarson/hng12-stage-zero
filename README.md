@@ -56,10 +56,10 @@ GET /stage-zero
 ```
 
 ### Example Usage
-You can test the API using `curl`:
-```sh
-curl -X GET http://127.0.0.1:8000/stage-zero
-```
+You can test the API live:
+- [Swagger Documentation](https://hng12-stage-zero.onrender.com/)
+- [Direct Request](https://hng12-stage-zero.onrender.com/stage-zero)
+
 Or with Python:
 ```python
 import requests
