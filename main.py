@@ -27,6 +27,6 @@ stage_0_db = {
 async def root():
     return {"message": "Welcome to HNG Internship Stage 0"}
 
-@app.get("/stage-zero", status_code=status.HTTP_200_OK, response_model=dict)
+@app.get("/stage-zero", status_code=status.HTTP_200_OK)
 async def get_stage_zero_info():
     return stage_0_db
