@@ -58,7 +58,7 @@ GET /stage-zero
 ### Example Usage
 You can test the API live:
 - [Swagger Documentation](https://hng12-stage-zero.onrender.com/docs)
-- [Direct Request](https://hng12-stage-zero.onrender.com/stage-zero)
+- [Direct Request](https://hng12-stage-zero.onrender.com)
 
 Or with Python:
 ```python
