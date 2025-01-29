@@ -19,7 +19,7 @@ current_date = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 stage_0_db = {
     "email": "esehgodprevail@gmail.com",
     "current_datetime": f"{current_date}",
-    "github_url": "<https://github.com/Egcarson/hng12-stage-zero.git>"
+    "github_url": "https://github.com/Egcarson/hng12-stage-zero.git"
 }
 
 #root
