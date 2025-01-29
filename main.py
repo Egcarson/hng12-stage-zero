@@ -13,7 +13,7 @@ app.add_middleware(
     allow_headers=["*"],  # Allows all headers
 )
 
-current_date = datetime.now(timezone.utc).isoformat() + "Z"
+current_date = datetime.now(timezone.utc).isoformat(timespec='microseconds').replace("+00:00", "Z")
 
 #response
 stage_0_db = {
@@ -22,6 +22,11 @@ stage_0_db = {
     "github_url": "https://github.com/Egcarson/hng12-stage-zero"
 }
 
-@app.get("/", status_code=status.HTTP_200_OK)
+#root
+@app.get('/')
+async def root():
+    return {"message": "Welcome to HNG Internship Stage 0"}
+
+@app.get("/stage-zero", status_code=status.HTTP_200_OK)
 async def get_stage_zero_info():
     return stage_0_db
