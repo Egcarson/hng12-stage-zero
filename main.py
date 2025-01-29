@@ -13,14 +13,6 @@ app.add_middleware(
     allow_headers=["*"],  # Allows all headers
 )
 
-current_date = datetime.now(timezone.utc).isoformat(timespec='microseconds').replace("+00:00", "Z")
-
-#response
-stage_0_db = {
-    "email": "esehgodprevail@gmail.com",
-    "current_datetime": f"{current_date}",
-    "github_url": "https://github.com/Egcarson/hng12-stage-zero"
-}
 
 #root
 @app.get('/')
@@ -29,4 +21,12 @@ async def root():
 
 @app.get("/stage-zero", status_code=status.HTTP_200_OK)
 async def get_stage_zero_info():
+    current_date = datetime.now(timezone.utc).isoformat(timespec='seconds').replace("+00:00", "Z")
+    
+    stage_0_db = {
+        "email": "esehgodprevail@gmail.com",
+        "current_datetime": current_date,
+        "github_url": "https://github.com/Egcarson/hng12-stage-zero"
+    }
+    
     return stage_0_db
